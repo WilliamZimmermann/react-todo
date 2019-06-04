@@ -1,5 +1,7 @@
 import React from 'react';
-import { TodoList } from './components/TodoList';
+// import { TodoList } from './components/TodoList';
+import { TodoListPure } from './components/TodoListPure';
+
 
 class App extends React.Component {
   
@@ -31,7 +33,7 @@ class App extends React.Component {
     return (
     <div className="App">
       <h1>React ToDo</h1>
-      <TodoList onAddTask={(event) => this.addTask(event)} tasks={this.state.tasks}></TodoList>
+      <TodoListPure onAddTask={(event) => this.addTask(event)} tasks={this.state.tasks}></TodoListPure>
     </div>
     );
   }

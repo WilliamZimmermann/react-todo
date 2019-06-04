@@ -1,5 +1,8 @@
 import React from 'react';
 
+/**
+ * @deprecated - Use TodoListPure instead
+ */
 export class TodoList extends React.Component { 
     render(){
         return (
