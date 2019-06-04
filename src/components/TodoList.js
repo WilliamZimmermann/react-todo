@@ -6,7 +6,7 @@ export class TodoList extends React.Component {
             <div>
                 <label>
                     Nova Tarefa:
-                    <input autoFocus type='text' />
+                    <input onKeyUp={this.props.onAddTask} autoFocus type='text' />
                 </label>
                 <p>Minhas tarefas:</p>
                 <ul>

@@ -11,12 +11,27 @@ class App extends React.Component {
       tasks: ['Estudar', 'Correr', 'VideoGame', 'IGTI']
     }
   }
+  
+  /**
+   * Add task
+   * @param {*} event 
+   */
+  addTask(event){
+    // IF press key wasn't the Enter (13)
+    if(event.keyCode !== 13){
+      return; // 
+    }else { // Is the Enter key
+      const newTask = event.target.value;
+      // Change state
+      this.setState({tasks: [...this.state.tasks, newTask]});
+    }
+  }
 
   render() {
     return (
     <div className="App">
       <h1>React ToDo</h1>
-      <TodoList tasks={this.state.tasks}></TodoList>
+      <TodoList onAddTask={(event) => this.addTask(event)} tasks={this.state.tasks}></TodoList>
     </div>
     );
   }
