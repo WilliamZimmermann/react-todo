@@ -10,9 +10,9 @@ export class TodoList extends React.Component {
                 </label>
                 <p>Minhas tarefas:</p>
                 <ul>
-                    <li>Estudar</li>
-                    <li>Correr</li>
-                    <li>Jogar Video-Game</li>
+                   {this.props.tasks.map(task=>{
+                       return <li>{task}</li>
+                   })} 
                 </ul>
             </div>
         );
